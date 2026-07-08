@@ -1,0 +1,48 @@
+### Register
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "nombre": "Ismael",
+  "apellido": "Ortiz",
+  "correo": "ismael@test.com",
+  "password": "123456",
+  "rol": "admin"
+}
+
+### Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "correo": "ismael@test.com",
+  "password": "123456"
+}
+
+### Crear paciente
+POST http://localhost:3000/pacientes
+Content-Type: application/json
+
+{
+  "cedula": "1723456790",
+  "nombres": "María Fernanda",
+  "apellidos": "Gómez Ruiz",
+  "fecha_nacimiento": "1999-03-12",
+  "direccion": "Quito, Ecuador",
+  "telefono": "0991234567",
+  "email": "maria@test.com",
+  "estado": true
+}
+
+### Crear cita
+POST http://localhost:3000/citas
+Content-Type: application/json
+
+{
+  "paciente_id": 1,
+  "medico_id": 1,
+  "fecha": "2026-06-20",
+  "hora": "10:00",
+  "motivo": "Control médico",
+  "estado": "programada"
+}
